@@ -1,0 +1,20 @@
+.about-section {
+    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-title {
+    font-size: 32px; /* Title size */
+    color: #333; /* Dark color for title */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.about-description {
+    font-size: 18px; /* Font size for description */
+    color: #555; /* Grey color for text */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.img-fluid {
+    border-radius: 8px; /* Rounded corners for images */
+}
