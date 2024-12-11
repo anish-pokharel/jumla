@@ -1,0 +1,237 @@
+body {
+    font-family: 'Baloo 2', sans-serif;
+    margin: 0;
+}
+
+header .navbar {
+    background-color: #0693e3; /* Set background color */
+}
+
+.navbar {
+    padding: 10px; /* Add padding to the navbar */
+}
+
+.navbar-brand {
+    color: white !important; /* Ensure brand text is white */
+    font-weight: bold; /* Make brand text bold */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Ensure nav links are white */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+.flag-container {
+    margin-left: auto; /* Pushes the flag to the right */
+}
+
+.nepali-flag {
+    height: 40px; /* Adjust height as needed */
+}
+
+.content-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1200px; /* Set a max width for the container */
+    margin: auto; /* Center the container */
+}
+
+.section-title {
+   font-size: 24px; 
+   color: #333; 
+   margin-bottom: 15px; 
+   font-weight: bold; /* Make the title bold */
+   text-align: center; /* Center align the title */
+   position: relative;
+}
+
+.section-title::after {
+   content: '';
+   display: block;
+   width: 50px;
+   height: 4px;
+   background-color: #e28118; /* Underline effect with highlight color */
+   margin: 10px auto; /* Center it below the title */
+   border-radius: 5px;
+}
+
+.carousel-inner img {
+   width: 100%; /* Make image responsive */
+   height: auto; /* Maintain aspect ratio */
+   border-radius: 8px; /* Rounded corners for carousel images */
+}
+
+.about {
+   padding-left: 20px; /* Space from the slider */
+   padding-right: 20px; /* Add right padding for balance */
+   border-radius: 8px; /* Rounded corners for a softer look */
+   background-color: #ffffff; /* White background for content area */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nagarik-chetra {
+    margin-left: -15px; /* Adjust to align with Bootstrap's grid system */
+    margin-right: -15px; /* Adjust to align with Bootstrap's grid system */
+}
+.icon-with-box {
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    padding: 10px; /* Reduced padding for a smaller box */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px; /* Add margin for spacing between boxes */
+}
+
+.icon-with-box:hover {
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.icon-with-box img {
+    max-width: 70%; /* Ensure images are smaller and responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly round image corners */
+}
+
+.icon-with-box h2 {
+    margin-top: 5px; /* Reduced space above headings in icon boxes */
+    font-size: 16px; /* Smaller font size for titles */
+    color: #333; /* Dark color for text */
+}
+
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 576px) {
+    .icon-with-box {
+        flex-basis: calc(50% - 20px); /* Two boxes per row on small screens */
+        margin-bottom: 15px; /* Space between rows */
+    }
+}
+/* Responsive adjustments for smaller screens */
+
+@media (max-width: 768px) {
+    .icon-with-box img {
+        max-width: 100%; /* Full width images on smaller screens */
+    }
+
+    .about {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/* footer {
+   text-align:center; 
+   padding:10px; 
+   background-color:#f1f1f1; 
+} */
+.gallery-section {
+    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-title {
+    font-size: 32px; /* Title size */
+    color: #333; /* Dark color for title */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.carousel-inner img {
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0693e3; /* Background color for navigation icons */
+    border-radius: 50%; /* Rounded navigation icons */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Adjust width of controls */
+}
+.site-footer {
+    background-color: #0693e3; /* Dark background for footer */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+}
+
+.wrapper {
+    max-width: 1200px; /* Max width for the footer */
+    margin: auto; /* Center the footer */
+}
+
+.footer-container {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact, .google-map, .links {
+    flex: 1; /* Equal flex basis for all sections */
+    min-width: 250px; /* Minimum width for responsiveness */
+    margin-right: 20px; /* Spacing between sections */
+}
+
+.contact h1, .google-map h1, .links h1 {
+    font-size: 20px; /* Heading size */
+    color: #ffffff; /* Highlight color for headings */
+}
+
+.contact-box {
+    display: flex; /* Flexbox for contact info layout */
+    justify-content: space-between; /* Space between contact details */
+}
+
+.span-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.span-wrap img {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.links ul {
+    list-style-type: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+
+.links li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.links a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.bottom-footer {
+    text-align: center; /* Center align bottom footer text */
+    margin-top: 20px; /* Space above bottom footer */
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+}

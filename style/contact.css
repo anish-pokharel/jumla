@@ -1,0 +1,96 @@
+.contact-section {
+    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-title {
+    font-size: 32px; /* Title size */
+    color: #333; /* Dark color for title */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.map-title {
+    font-size: 24px; /* Title size for map */
+    color: #333; /* Dark color for map title */
+    margin-bottom: 15px; /* Space below map title */
+}
+
+.form-label {
+    font-weight: bold; /* Bold labels */
+}
+
+.btn-primary {
+    background-color: #0693e3; /* Primary button color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.notices-section {
+    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-title {
+    font-size: 32px; /* Title size */
+    color: #333; /* Dark color for title */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.notices-list {
+    margin-top: 20px; /* Space above notices list */
+}
+
+.notice-item {
+    background-color: #ffffff; /* White background for each notice */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside notice items */
+    margin-bottom: 20px; /* Space between notices */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.notice-item h3 {
+    color: #0693e3; /* Color for notice titles */
+}
+
+.notice-item p {
+    color: #555; /* Grey color for notice content */
+}
+
+
+
+
+.services-section {
+    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.section-title {
+    font-size: 32px; /* Title size */
+    color: #333; /* Dark color for title */
+    margin-bottom: 30px; /* Space below title */
+}
+
+.card {
+    border: none; /* Remove default card border */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.card-title {
+    font-size: 20px; /* Title size for services */
+    color: #0693e3; /* Color for service titles */
+}
+
+.card-text {
+    color: #555; /* Grey color for service descriptions */
+}
