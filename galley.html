@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/gallery.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://chandannathmun.gov.np/sites/all/themes/newmun/new_logo.png"
+                        alt="चन्दननाथ नगरपालिका Logo" class="municipality-logo">
+                    चन्दननाथ नगरपालिका
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">हाम्रो बारेमा</a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">सेवाहरू</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">सम्पर्क</a></li>
+                        <li class="nav-item"><a class="nav-link" href="notice.html">सूचनाहरू</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galley.html">ग्यालेरी</a></li>
+                    </ul>
+                    <div class="flag-container">
+                        <img src="https://kathmandu.gov.np/wp-content/themes/kmc-theme/images/flag-nepal.gif"
+                            alt="Nepali Flag" class="nepali-flag">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="gallery-section">
+        <div class="container">
+            <h1 class="section-title text-center">ग्यालरी</h1>
+            <div class="row g-4">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/mainiimg.jpeg" data-lightbox="gallery" data-title="Image 1 Description">
+                        <img src="./img/mainiimg.jpeg" class="img-fluid rounded" alt="Image 1">
+                    </a>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/2.jpeg" data-lightbox="gallery" data-title="Image 2 Description">
+                        <img src="./img/2.jpeg" class="img-fluid rounded" alt="Image 2">
+                    </a>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/3.jpeg" data-lightbox="gallery" data-title="Image 3 Description">
+                        <img src="./img/3.jpeg" class="img-fluid rounded" alt="Image 3">
+                    </a>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/4.png" data-lightbox="gallery" data-title="Image 4 Description">
+                        <img src="./img/4.png" class="img-fluid rounded" alt="Image 4">
+                    </a>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/5.png" data-lightbox="gallery" data-title="Image 5 Description">
+                        <img src="./img/5.png" class="img-fluid rounded" alt="Image 5">
+                    </a>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="./img/6.png" data-lightbox="gallery" data-title="Image 6 Description">
+                        <img src="./img/6.png" class="img-fluid rounded" alt="Image 6">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>
