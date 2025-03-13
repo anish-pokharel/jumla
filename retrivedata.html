@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Login & Contact Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div id="sidebar">
+    <h3 class="text-center text-white">Admin Panel</h3>
+    <a href="#" id="contactLink">Contact Data</a>
+    <a href="#" id="noticeLink">Notices</a>
+    <a href="#" id="populationLink">Population Data</a>
+    <hr>
+    <a href="#" id="logoutLink">Logout</a>
+</div>
+
+<!-- Content Area -->
+<div id="content">
+    <!-- Contact Data Section -->
+    <div id="contactSection" style="display: none;">
+        <h2 class="text-center">Contact Details</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="contactData"></tbody>
+        </table>
+    </div>
+
+    <!-- Notices Section -->
+    <div id="noticeSection" style="display: none;">
+        <h2 class="text-center">Notices</h2>
+    
+        <!-- Notice List -->
+        <ul id="noticeList" class="list-group"></ul>
+    
+        <!-- Notice Form -->
+        <div id="noticeForm" style="margin-top: 20px;">
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" id="noticeTitle" placeholder="Enter notice title..." />
+                <textarea class="form-control" id="noticeText" rows="4" placeholder="Enter notice description..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mt-2" id="submitNoticeBtn">Submit Notice</button>
+            <button class="btn btn-secondary mt-2" id="cancelNoticeBtn">Cancel</button>
+        </div>
+    </div>
+    
+    
+
+    <!-- Population Data Entry Section -->
+    <div id="populationSection" style="display: none;">
+        <h2 class="text-center">Population Data Entry</h2>
+        <form id="populationForm">
+            <div class="form-group">
+                <label for="areaName">Area Name:</label>
+                <input type="text" class="form-control" id="areaName" placeholder="Enter area name" required>
+            </div>
+            <div class="form-group">
+                <label for="population">Population:</label>
+                <input type="number" class="form-control" id="population" placeholder="Enter population number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Login Section -->
+<div class="container" id="loginSection" style="display: block;">
+    <h2 class="text-center">Login</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+    <div id="loginError" style="display: none; color: red; margin-top: 10px;">Invalid username or password.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

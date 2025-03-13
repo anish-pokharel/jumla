@@ -1,0 +1,38 @@
+/* Custom styles for the sidebar */
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding-top: 20px;
+    display: none; /* Hide sidebar initially */
+}
+
+#sidebar a {
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Content area */
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    display: none; /* Hide content initially */
+}
+
+/* Login form container */
+#loginSection {
+    max-width: 400px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}

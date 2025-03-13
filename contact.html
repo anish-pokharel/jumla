@@ -45,25 +45,78 @@
             <h1 class="section-title text-center">सम्पर्क गर्नुहोस्</h1>
             <div class="row">
                 <div class="col-lg-6">
-                    <form id="contactForm" action="your_backend_script.php" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">नाम</label>
-                            <input type="text" class="form-control" id="name" name="name" required placeholder="तपाईंको नाम">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">इमेल</label>
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="name@example.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">फोन नम्बर</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="तपाईंको फोन नम्बर">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">सन्देश</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required placeholder="तपाईंको सन्देश"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">पठाउनुहोस्</button>
-                    </form>
+                    <!-- <form id="contactForm" action="your_backend_script.php" method="POST"> -->
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">नाम:</label>
+                                <input type="text" class="form-control" id="name" placeholder="तपाईंको नाम" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ईमेल:</label>
+                                <input type="email" class="form-control" id="email" placeholder="तपाईंको ईमेल" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">फोन:</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="फोन नम्बर" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">सन्देश:</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="तपाईंको सन्देश" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">पठाउनुहोस्</button>
+                        </form>
+                        
+                        <!-- Add this div for displaying messages -->
+                        <div id="responseMessage" style="display: none;"></div>
+                        
+                        <script>
+                            document.getElementById("contactForm").addEventListener("submit", async function(event) {
+                                event.preventDefault(); // Prevent default form submission
+                        
+                                // Get input values
+                                const name = document.getElementById("name").value.trim();
+                                const email = document.getElementById("email").value.trim();
+                                const phone = document.getElementById("phone").value.trim();
+                                const message = document.getElementById("message").value.trim();
+                        
+                                // Basic validation
+                                if (!name || !email || !phone || !message) {
+                                    showMessage("कृपया सबै जानकारी भर्नुहोस्!", "danger");
+                                    return;
+                                }
+                        
+                                // Send data to the backend (Replace with your actual API URL)
+                                try {
+                                    const response = await fetch("http://localhost:3200/contact", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify({ name, email, phone, message }),
+                                    });
+                        
+                                    const data = await response.json();
+                        
+                                    if (response.ok) {
+                                        showMessage(data.message, "success");
+                                        document.getElementById("contactForm").reset(); // Reset form
+                                    } else {
+                                        showMessage(data.message || "सन्देश पठाउन असफल भयो!", "danger");
+                                    }
+                                } catch (error) {
+                                    showMessage("सर्भर त्रुटि! पछि प्रयास गर्नुहोस्।", "danger");
+                                }
+                            });
+                        
+                            // Function to display success/error messages
+                            function showMessage(msg, type) {
+                                const responseDiv = document.getElementById("responseMessage");
+                                responseDiv.innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
+                                responseDiv.style.display = "block";
+                                setTimeout(() => { responseDiv.style.display = "none"; }, 4000); // Hide after 4 sec
+                            }
+                        </script>
+                        
                 </div>
                 <div class="col-lg-6">
                     <h2 class="map-title">हाम्रो स्थान</h2>
@@ -145,6 +198,9 @@
             </div>
         </div>
     </footer>
+    
+        
+        
     <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
