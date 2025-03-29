@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../jumlabackenf"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "jumla"
+	}
+}
