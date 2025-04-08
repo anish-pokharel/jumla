@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const tableBody = document.getElementById('contactData');
         tableBody.innerHTML = `<tr><td colspan="6" class="text-center">Loading contacts...</td></tr>`;
         
-        fetch('http://localhost:3200/getContactsDetails')
+        fetch('https://jumlabackend.vercel.app/getContactsDetails')
             .then(response => {
                 if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                 return response.json();
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fetchContacts() {
-        fetch('http://localhost:3200/getContactsDetails')  // Replace with your API endpoint
+        fetch('https://jumlabackend.vercel.app/getContactsDetails')  // Replace with your API endpoint
             .then(response => response.json())
             .then(data => {
                 const tableBody = document.getElementById('contactData');
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Notice handling functions
     async function fetchNotices() {
         try {
-            const response = await fetch("http://localhost:3200/allnotices");
+            const response = await fetch("https://jumlabackend.vercel.app/allnotices");
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             
             const data = await response.json();
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // async function fetchNotices() {
     //     try {
-    //         const response = await fetch("http://localhost:3200/allnotices");
+    //         const response = await fetch("https://jumlabackend.vercel.app/allnotices");
     //         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             
     //         const data = await response.json();
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = true;
     
         // Make the API request to save the notice
-        fetch('http://localhost:3200/addnotices', {
+        fetch('https://jumlabackend.vercel.app/addnotices', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.deleteNotice = function(noticeId) {
         if (!confirm("Are you sure you want to delete this notice?")) return;
     
-        fetch(`http://localhost:3200/deleteNotice/${noticeId}`, {
+        fetch(`https://jumlabackend.vercel.app/deleteNotice/${noticeId}`, {
             method: 'DELETE'
         })
         .then(response => response.json())
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
               tbody.innerHTML += `
                 <tr>
                   <td>
-                    <img src="http://localhost:3200/img/${member.photo}" 
+                    <img src="https://jumlabackend.vercel.app/img/${member.photo}" 
                          alt="${member.name}" 
                          style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%;">
                   </td>
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Initial load
       window.addEventListener('DOMContentLoaded', loadTeamMembers);
     //   function fetchPopulationData() {
-    //     fetch('http://localhost:3200/getPopulation')
+    //     fetch('https://jumlabackend.vercel.app/getPopulation')
     //         .then(response => response.json())
     //         .then(data => {
     //             const tableBody = document.getElementById('populationTableBody');
@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Ensure population is converted to a number if it's a string
             const payload = { areaName, population: Number(population) };
             
-            fetch('http://localhost:3200/postPopulation', {
+            fetch('https://jumlabackend.vercel.app/postPopulation', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     function fetchPopulationData() {
-        fetch('http://localhost:3200/getPopulation')  // Correct endpoint
+        fetch('https://jumlabackend.vercel.app/getPopulation')  // Correct endpoint
             .then(response => response.json())
             .then(data => {
                 console.log(data);  // Check if the data is fetched correctly
@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function deletePopulationData(id) {
         if (confirm("Are you sure you want to delete this record?")) {
-            fetch(`http://localhost:3200/population/${id}`, { method: 'DELETE' })
+            fetch(`https://jumlabackend.vercel.app/population/${id}`, { method: 'DELETE' })
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);  // Log the response for debugging

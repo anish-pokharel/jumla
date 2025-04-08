@@ -187,7 +187,7 @@
       </section>
       
       <script>
-        fetch('http://localhost:3200/getTeamMembers')
+        fetch('https://jumlabackend.vercel.app/getTeamMembers')
           .then(res => res.json())
           .then(data => {
             const carouselContent = document.getElementById('carouselContent');
