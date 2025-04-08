@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loginForm.reset();
         loginError.style.display = "none";
     });
-    const teamAPI = 'http://localhost:3200';
+    const teamAPI = 'https://jumlabackend.vercel.app';
     document.getElementById('teamForm').addEventListener('submit', e => {
         e.preventDefault();
         const newMember = {
